@@ -1,0 +1,347 @@
+{
+  "contract_name": "KoETH",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "gameQuery",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "koETHHost",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "endHill",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "hillNumber",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "inputAddress",
+          "type": "address"
+        }
+      ],
+      "name": "getWithdrawlMapping",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "checkGameEnd",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "inputAddress",
+          "type": "address"
+        }
+      ],
+      "name": "forceWithdraw",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getDataArray",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "hillTotal",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "climbAttempts",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "theKing",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "fee",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "currentHill",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "hillNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "starthillNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "endHillTime",
+          "type": "uint256"
+        }
+      ],
+      "name": "hillBuilt",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "attemptAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "player",
+          "type": "address"
+        }
+      ],
+      "name": "ClimbAttempt",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "newHill",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newKing",
+          "type": "address"
+        }
+      ],
+      "name": "ClaimedHill",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "hillNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "king",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "hillHeight",
+          "type": "uint256"
+        }
+      ],
+      "name": "crownKing",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040526000600555600a600655341561001657fe5b5b60008054600160a060020a03191633600160a060020a031617905561004764010000000061004d81026105f41704565b5b6100bf565b60058054600190810191829055600060028190556004558054600160a060020a03191690554262093a808101600781905560408051938452602084019290925282820152517f440811be195a0825ad6a1ae4b9fafaf6cab21b2e0826b6e1b860e3961c06cad69181900360600190a15b565b610692806100ce6000396000f300606060405236156100b45763ffffffff60e060020a60003504166306db49f081146100d95780631ea31b84146100fd5780633ccfd60b1461012957806355e7c3491461013b57806378f550e81461014d5780637a4e721f1461016f5780637f9fdf4a1461019d578063882f3e16146101c1578063a170b5ac146101df578063ae94e7cc1461022c578063b96f86f11461024e578063bea61c1514610270578063ddca3f431461029c578063dfc127e5146102be575b6100d75b6100c06102e0565b15156100cc5760006000fd5b6100d4610312565b5b565b005b34156100e157fe5b6100e96103da565b604080519115158252519081900360200190f35b341561010557fe5b61010d6103e3565b60408051600160a060020a039092168252519081900360200190f35b341561013157fe5b6100d76103f2565b005b341561014357fe5b6100d76103fe565b005b341561015557fe5b61015d6104e3565b60408051918252519081900360200190f35b341561017757fe5b61015d600160a060020a03600435166104e9565b60408051918252519081900360200190f35b34156101a557fe5b6100e96102e0565b604080519115158252519081900360200190f35b34156101c957fe5b6100d7600160a060020a0360043516610508565b005b34156101e757fe5b6101ef6105a6565b60408051600160a060020a0390971687526020870195909552858501939093526060850191909152608084015260a0830152519081900360c00190f35b341561023457fe5b61015d6105cd565b60408051918252519081900360200190f35b341561025657fe5b61015d6105d3565b60408051918252519081900360200190f35b341561027857fe5b61010d6105d9565b60408051600160a060020a039092168252519081900360200190f35b34156102a457fe5b61015d6105e8565b60408051918252519081900360200190f35b34156102c657fe5b61015d6105ee565b60408051918252519081900360200190f35b600063595aab944210610300576102f56103da565b610300576001610303565b60005b905061030e565b5060005b5b90565b6002543411156103815760018054600160a060020a03191633600160a060020a0390811691909117918290553460028190556040805191825292909116602082015281517e9983a087e536d0beaabe2ffb1360072a7f4d719895a4a9bedce570f38ef552929181900390910190a15b600380543490810190915560408051918252600160a060020a033316602083015280517f2d64f3971aee4b61d8590a2a3dc8dba5d48ef1dc48fbcbe226bae122987eab319281900390910190a16004805460010190555b565b60075442115b90565b600054600160a060020a031681565b6100d433610508565b5b565b60006104086102e0565b15156104145760006000fd5b60065460025481151561042357fe5b6001549190049150600160a060020a0316151561043f57610468565b600254600154600160a060020a0316600090815260086020526040902080549183900390910190555b60008054600160a060020a039081168252600860209081526040928390208054850190556005546001546002548551928352931691810191909152908390038183015290517fded9f6ede0e4b947dc9072e832c32188d568c31a8038ab5520e6db3ae68a44f79181900360600190a16104df6105f4565b5b50565b60055481565b600160a060020a0381166000908152600860205260409020545b919050565b6000805433600160a060020a039081169116146105255760006000fd5b50600160a060020a03811660009081526008602052604090205480151561054b576105a0565b600160a060020a0382166000818152600860205260408082208290555183156108fc0291849190818181858888f1935050505015156105a057600160a060020a03821660009081526008602052604090208190555b5b5b5050565b600154600254600354600454600754600554600160a060020a03909516945b909192939495565b60035481565b60045481565b600154600160a060020a031681565b60065481565b60025481565b60058054600190810191829055600060028190556004558054600160a060020a03191690554262093a808101600781905560408051938452602084019290925282820152517f440811be195a0825ad6a1ae4b9fafaf6cab21b2e0826b6e1b860e3961c06cad69181900360600190a15b5600a165627a7a72305820ed1412174988f653a6af265c5b383e3fdc75fb41873408cbb265a14b305ce3080029",
+  "networks": {
+    "1498604399935": {
+      "events": {
+        "0x1937a772bd74a35505517dc6ae3b8b4f2d2a006bf28a2a3d47a7b0623cf53654": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "startTime",
+              "type": "uint256"
+            }
+          ],
+          "name": "hillBuilt",
+          "type": "event"
+        },
+        "0x2d64f3971aee4b61d8590a2a3dc8dba5d48ef1dc48fbcbe226bae122987eab31": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "attemptAmount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "player",
+              "type": "address"
+            }
+          ],
+          "name": "ClimbAttempt",
+          "type": "event"
+        },
+        "0x009983a087e536d0beaabe2ffb1360072a7f4d719895a4a9bedce570f38ef552": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newHill",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "newKing",
+              "type": "address"
+            }
+          ],
+          "name": "ClaimedHill",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x7a01d0bbeefd448ceee63e2761f1bfb34c5d3ff7",
+      "updated_at": 1498604407488
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1499289607129
+}
